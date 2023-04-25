@@ -19,7 +19,6 @@ const getMarks=asyncHandler(async(req,res)=>{
 // @route Get/api/class/:roll
 // @access public
 const addStudent=asyncHandler(async(req,res)=>{
-    console.log("HERE");
     console.log(req.body);
     const {roll_no,name,marks}=req.body;
     const student=await Student.create({
