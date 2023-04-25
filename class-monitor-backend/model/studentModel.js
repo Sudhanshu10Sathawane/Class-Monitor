@@ -3,6 +3,7 @@ const mongoose=require("mongoose");
 const studentSchema=mongoose.Schema({
     roll_no:{
         type: Number,
+        unique:[true]
     },
     name:{
         type:String,
@@ -24,5 +25,5 @@ const studentSchema=mongoose.Schema({
             type:Number,
         },
     }
-});
+},{ versionKey: false });
 module.exports=mongoose.model("Student",studentSchema);
