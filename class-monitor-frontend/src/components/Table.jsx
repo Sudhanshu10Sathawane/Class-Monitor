@@ -1,7 +1,16 @@
-import React from 'react'
+import Axios from 'axios';
+import React, { useEffect, useState } from 'react'
 
-const Table = (props) => {
-    const userData=props.saman;
+const Table = () => {
+  const [userData,setData]=useState();
+  const getData=async()=>{
+    const res= await Axios.get("http://localhost:5001/api/class/students");
+    setData(res.data);
+    console.log(res);
+  }
+  useEffect(()=>{
+    getData()
+  },[]);
   return (
     <div className='flex justify-center'>
     <table className='shadow-2xl'>
@@ -36,4 +45,4 @@ const Table = (props) => {
   )
 }
 
-export default Table
+export default Table;
