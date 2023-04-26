@@ -48,7 +48,7 @@ const addStudent=asyncHandler(async(req,res)=>{
 // ]
 const getPercentage=asyncHandler(async(req,res)=>{
     const avgMarks = await Student.aggregate(
-      [ { $group: { _id: "$roll_no", avgMarks:{$avg:{$sum: ["$marks.English", "$marks.Maths", "$marks.Hindi", "$marks.Science", "$marks.Social Science"] }} } },{$project:{roll_no:"$_id",Percentage:{$divide:["$avgMarks",5]}}}]);
+      [ { $group: { _id: "$roll_no", avgMarks:{$avg:{$sum: ["$marks.English", "$marks.Maths", "$marks.Hindi", "$marks.Science", "$marks.Social Science"] }} } },{$project:{roll_no:"$_id",Percentage:{$divide:["$avgMarks",5]}}},{$sort:{Percentage:-1}}]);
     res.status(200).json({avgMarks});
 });
 module.exports={getStudents,getMarks,addStudent,getPercentage};
