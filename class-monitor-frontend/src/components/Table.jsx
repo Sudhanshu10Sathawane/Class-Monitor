@@ -12,7 +12,7 @@ const Table = () => {
     getData()
   },[]);
   return (
-    <div className='flex justify-center'>
+    <div className='justify-left'>
     <table className='shadow-2xl'>
         <thead className='p-4 bg-yellow-400 border-spacing-1'>
           <tr>
