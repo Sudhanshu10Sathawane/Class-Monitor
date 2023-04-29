@@ -9,7 +9,9 @@ const App = () => {
       <NavBar/>
       <div className='flex flex-row'>
       <Table/>
+      <div className='p-20'>
       <TopperChart/>
+      </div>
       </div>
     </>
   )
