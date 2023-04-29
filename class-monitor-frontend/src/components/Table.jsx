@@ -16,8 +16,8 @@ const Table = () => {
     <table className='shadow-2xl'>
         <thead className='p-4 bg-yellow-400 border-spacing-1'>
           <tr>
-            <th className='py-4 p-3 '>Name</th>
             <th className='py-4 p-3 '>Roll No</th>
+            <th className='py-4 p-3 '>Name</th>
             <th className='py-4 p-3 '>English</th>
             <th className='py-4 p-3 '>Hindi</th>
             <th className='py-4 p-3 '>Maths</th>
